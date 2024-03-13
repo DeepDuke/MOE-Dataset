@@ -122,7 +122,7 @@ We evaluate some SOTA algorithms on sequences `00,01,02` to set up a reference b
 
 | Erasor on Seq 00 | MotionBEV on Seq 01 | Insmos on Seq 02 |
 | ----- | ----- | ----- |
-| <img src="./assets/gif/Erasor.gif" width="300" height="180">  | <img src="./assets/gif/MotionBEV.gif" width="300" height="180">  | <img src="./assets/gif/Insmos.gif" width="300" height="180">  |
+| <img src="./assets/gif/Erasor.gif" width="250" height="150">  | <img src="./assets/gif/MotionBEV.gif" width="250" height="150">  | <img src="./assets/gif/Insmos.gif" width="250" height="150">  |
 
 </div>
 
@@ -158,7 +158,7 @@ The link for our competition is at https://codalab.lisn.upsaclay.fr/competitions
 
 ## Issues
 
-If you have any question about this dataset, please feel free to open a issue for discussion. TKS!
+If you have any question about this dataset, please feel free to open an issue for discussion. TKS!
 
 ## Acknowledgement
 
@@ -180,3 +180,7 @@ We want thank the following open source code and dataset.
 Citation format is comming soon! 
 
 If you find this dataset useful to you, please feel free to give us a star! TKS!
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=DeepDuke/MOE-Dataset&type=Date)](https://star-history.com/#DeepDuke/MOE-Dataset&Date)
