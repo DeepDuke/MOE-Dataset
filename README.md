@@ -93,7 +93,7 @@ We denote the moveable point as `1` otherwise `0`, the moving status as `1` othe
 
 #### Ground truth Pose
 
-For each sequence, the ground truth poses for all scans are store in `gt_poses.txt`. Each row in `gt_poses.txt` represents the pose for the cooresponding ordered scan. For example, first row represents the pose for `000000.pcd` in that sequence. We adopt the KIIT format to reprensent the pose, that is the first 3 rows of elements in the `4x4` transformation matrix.
+For each sequence, the ground truth poses for all scans are store in `gt_poses.txt`. Each row in `gt_poses.txt` represents the pose for the cooresponding ordered scan. For example, first row represents the pose for `000000.pcd` in that sequence. We adopt the KITTI format to reprensent the pose, that is the first 3 rows of elements in the `4x4` transformation matrix.
 
 ```python
 # Each row in gt_poses.txt
@@ -111,16 +111,16 @@ T =
 
 ### Download
 
-We put the zipped sequence file in the release of this repository. Please download and unzip them. Note: Some pcd file of sequences may be splitted into several zipped file due to the siingle file limitation of Github is 2GB. Please merge  the unzipped files into same sequence folder.
+We put the zipped sequence file in the release of this repository https://github.com/DeepDuke/MOE-Dataset/releases/tag/publish_dataset . Please download and unzip them. Note: Some pcd file of sequences may be splitted into several zipped file due to the single file limitation of Github is 2GB. Please merge  the unzipped files into same sequence folder.
 
 
 ## Benchmark
 
-We evaluate some SOTA algorithms on sequences `00,01,02` to set up a reference benchmark for their performance. We test 3 offline non-learning methods - [Removert](https://github.com/gisbi-kim/removert), [ERASOR](https://github.com/LimHyungTae/ERASOR), and [Octomap](https://github.com/Kin-Zhang/octomap/tree/feat/benchmark); 3 online non-learning methods - [Dynablox](https://github.com/ethz-asl/dynablox), [DOD](https://github.com/UTS-RI/dynamic_object_detection/), [M-detector](https://github.com/hku-mars/M-detector); two representives for differnt branches of learning based methods - [MotionBEV](https://github.com/xiekkki/motionbev) and [InsMOS](https://github.com/nubot-nudt/InsMOS). For non-learning based methods, we tried to tune those params on each sequence. For learn-based methods, we test them using model trained on the larger scale dataset SemanticKITTI to validate their generalization ability. Actually current learning-based methods are verry easy to overfit on single structure dataset (like urban high ways), and not so robust on different structured high-density scenes in this dataset.
+We evaluate some SOTA algorithms on sequences `00,01,02` to set up a reference benchmark for their performance. We test 3 offline non-learning methods - [Removert](https://github.com/gisbi-kim/removert), [ERASOR](https://github.com/LimHyungTae/ERASOR), and [Octomap](https://github.com/Kin-Zhang/octomap/tree/feat/benchmark); 3 online non-learning methods - [Dynablox](https://github.com/ethz-asl/dynablox), [DOD](https://github.com/UTS-RI/dynamic_object_detection/), [M-detector](https://github.com/hku-mars/M-detector); two representives for different branches of learning based methods - [MotionBEV](https://github.com/xiekkki/motionbev) and [InsMOS](https://github.com/nubot-nudt/InsMOS). For non-learning based methods, we tried to tune those params on each sequence. For learn-based methods, we test them using model trained on the larger scale dataset SemanticKITTI to validate their generalization ability. Actually current learning-based methods are verry easy to overfit on single structure dataset (like urban high ways), and not so robust on different structured high-density scenes in this dataset.
 
 <div align="center">
 
-| Erasor on Seq 00 | MotionBEV on Seq 01 | Insmos on Seq 02 |
+| ERASOR on Seq 00 | MotionBEV on Seq 01 | InsMOS on Seq 02 |
 | ----- | ----- | ----- |
 | <img src="./assets/gif/Erasor.gif" width="250" height="150">  | <img src="./assets/gif/MotionBEV.gif" width="250" height="150">  | <img src="./assets/gif/Insmos.gif" width="250" height="150">  |
 
@@ -148,11 +148,11 @@ IoU = TP / (TP + FP + FN)
 
 <div align="center">
 
-<img src="./assets/img/Competition.png" width="500" height="230">
+<img src="./assets/img/Competition.png" width="700" height="330">
 
 </div>
 
-To facilliate the related community, we utilize part sequences `{05,06,07,08,09}` to host a Moving Event Detection with LiDAR on [CodaLab](https://codalab.lisn.upsaclay.fr/). So our dataset will only provide motion label for sequences `{00, 01, 02, 03, 04}`, for sequences `{05, 06, 07, 08, 09}` we will only publish the pointcloud files and ground truth poses.
+To facilitate the related community, we utilize part sequences `{05,06,07,08,09}` to host a Moving Event Detection with LiDAR on [CodaLab](https://codalab.lisn.upsaclay.fr/). So our dataset will only provide motion label for sequences `{00, 01, 02, 03, 04}`, for sequences `{05, 06, 07, 08, 09}` we will only publish the pointcloud files and ground truth poses.
 
 The link for our competition is at https://codalab.lisn.upsaclay.fr/competitions/18028. If you are interested in it, please feel free to take part in it!
 
